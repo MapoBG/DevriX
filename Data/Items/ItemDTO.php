@@ -14,6 +14,8 @@ class ItemDTO
 
     private $postedOn;
 
+    private $approved;
+
     /**
      * ItemDTO constructor.
      * @param $title
@@ -22,13 +24,14 @@ class ItemDTO
      * @param $description
      * @param $postedOn
      */
-    public function __construct($title, $company, $salary, $description, $postedOn)
+    public function __construct($title, $company, $salary, $description, $postedOn, $approved)
     {
         $this->title = $title;
         $this->company = $company;
         $this->salary = $salary;
         $this->description = $description;
         $this->postedOn = $postedOn;
+        $this->approved = $approved;
     }
 
     /**
@@ -109,6 +112,22 @@ class ItemDTO
     public function setPostedOn($postedOn): void
     {
         $this->postedOn = $postedOn;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getApproved()
+    {
+        return $this->approved;
+    }
+
+    /**
+     * @param mixed $approved
+     */
+    public function setApproved($approved): void
+    {
+        $this->approved = $approved;
     }
 
 }

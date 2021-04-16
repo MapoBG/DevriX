@@ -5,6 +5,6 @@ $error = '';
 
 $itemRepo = new \Repositories\Items\ItemRepository($db);
 
-$items = $itemRepo->getAll();
+$items = $itemRepo->getAllApproved();
 
 require_once 'views/index.php';

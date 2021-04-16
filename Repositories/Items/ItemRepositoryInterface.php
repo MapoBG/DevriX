@@ -15,4 +15,6 @@ interface ItemRepositoryInterface
     public function editItem(ItemDTO $itemDTO, int $id);
 
     public function deleteItem(int $id);
+
+    public function getAllApproved(): \Generator;
 }

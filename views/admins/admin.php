@@ -1,6 +1,6 @@
 <?php include_once "views/templates/header.php"; ?>
 <div id="error">
-    <h3 style="color: red"><?=$error;?></h3>
+    <h3 style="color: red"><?php $error;?></h3>
 </div>
     <ul class="jobs-listing">
 <?php foreach($items as $item): ?>
@@ -13,6 +13,10 @@
                 </div>
             </div>
             <div class="job-edit">
+                <?php if ($item['approved'] === 'false'): ?>
+                <a href="approve.php?id=<?php echo $item['id'] ?>">Approve</a>
+                <?php endif; ?>
+
                 <a href="edit.php?id=<?php echo $item['id']?>">Edit</a>
                 <a onClick="return confirm('Please confirm deletion')" href='delete.php?id=<?php echo $item['id']?>'>Delete</a>
             </div>
@@ -20,3 +24,5 @@
 <?php endforeach; ?>
 
 <?php include_once "views/templates/footer.php"; ?>
+
+

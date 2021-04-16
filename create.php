@@ -9,7 +9,7 @@ if(isset($_POST['create'])) {
     $salary = htmlspecialchars($_POST['salary']);
     $description = htmlspecialchars ($_POST['description']);
 
-    $itemDTO = new \Data\Items\ItemDTO($title, $company, $salary, $description, -1);
+    $itemDTO = new \Data\Items\ItemDTO($title, $company, $salary, $description, -1, 'false');
 
     $itemService = new \Services\Items\ItemService(
         new \Repositories\Items\ItemRepository($db)

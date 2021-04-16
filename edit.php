@@ -20,7 +20,7 @@ if(isset($_POST['edit'])){
     $salary = htmlspecialchars($_POST['salary']);
     $description = htmlspecialchars ($_POST['description']);
 
-    $itemDTO = new \Data\Items\ItemDTO($title, $company, $salary, $description, $id);
+    $itemDTO = new \Data\Items\ItemDTO($title, $company, $salary, $description, $id, $item->getApproved());
 
     $itemService = new \Services\Items\ItemService(
         new \Repositories\Items\ItemRepository($db)
