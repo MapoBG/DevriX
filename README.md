@@ -8,7 +8,7 @@ Requirements and Tools used:
 
 Application should be run from:
 
-http://localhost/DevriX/index.php
+index.php
 
 Functionalities:
 
